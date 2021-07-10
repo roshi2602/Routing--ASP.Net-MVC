@@ -1,0 +1,29 @@
+﻿@model Routing.Models.Student
+
+@{
+    ViewBag.Title = "get students id";
+}
+
+body{
+<div>
+    <!--at the rate html are used as html helpers,-->
+    <!--DisplayNameFor shows name of property-->
+    <!--Html.DisplayFor(model => model.SomeList) will iterate over items in SomeList and display the items using DisplayFor() recursively.-->
+    @Html.DisplayNameFor(model => model.sid);
+</div>
+<div>
+    @Html.DisplayFor(model => model.sid);
+</div>
+<div>
+    @Html.DisplayNameFor(model => model.sname);
+</div>
+<div>
+    @Html.DisplayFor(model => model.sname);
+</div>
+<div>
+    @Html.DisplayNameFor(model => model.sroll);
+</div>
+<div>
+    @Html.DisplayFor(model => model.sroll);
+</div>
+}

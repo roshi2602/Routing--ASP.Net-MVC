@@ -1,0 +1,35 @@
+﻿@model IEnumerable< Routing.Models.Student>
+
+@{
+    ViewBag.Title = "get all students";
+}
+
+<body>
+<table>
+    <tr>
+        <th>
+    <!--at the rate html are used as html helpers,-->
+    <!--DisplayNameFor shows name of property-->
+    <!--Html.DisplayFor(model => model.SomeList) will iterate over items in SomeList and display the items using DisplayFor() recursively.-->
+    @Html.DisplayNameFor(model => model.sid);
+</th>
+        <th>
+            @Html.DisplayNameFor(model => model.sname);
+        </th>
+<th>
+    @Html.DisplayNameFor(model => model.sroll);
+</th>
+</tr>
+<!--accessing them from a model now-->
+
+    <!--applying razor syntax at foreach loop-->
+@foreach(var i in Model){
+    <tr>
+        <td>   @Html.DisplayFor(modelItem =>i.sid);</td>
+        <td>@Html.DisplayFor(modelItem =>i.sname);</td>
+        <td>@Html.DisplayFor(modelItem => i.sroll);</td>
+    </tr>
+    }
+    </table>
+    </body>
+
